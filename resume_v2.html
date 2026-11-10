@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민교 VER.2 | 지루한 이력서 다 갖다 버려 💥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700;800;900&family=Pretendard:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* 힙하고 세련된 매트(Matte) 톤다운 팔레트 */
+    :root {
+      --bg: #F4F1EA;          /* 은은하고 고급스러운 빈티지 오프화이트 */
+      --card: #FFFFFF;
+      --black: #1E2024;        /* 묵직한 차콜 블랙 */
+      --accent-coral: #E05A47; /* 쨍하지 않고 감각적인 빈티지 코랄 레드 */
+      --accent-butter: #F7D070;/* 눈 편한 머스터드 버터 옐로우 */
+      --accent-sage: #82A3A1;  /* 세련된 세이지 민트그레이 */
+      --shadow: 5px 5px 0px var(--black);
+      --shadow-lg: 8px 8px 0px var(--black);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--black);
+      font-family: 'Pretendard', sans-serif;
+      padding: 50px 20px;
+      line-height: 1.55;
+      background-image: radial-gradient(#DCD6C8 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* 상단 배너 */
+    .top-badge {
+      display: inline-block;
+      background: var(--accent-coral);
+      color: #fff;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 900;
+      padding: 5px 16px;
+      border: 2.5px solid var(--black);
+      border-radius: 999px;
+      box-shadow: 3px 3px 0px var(--black);
+      transform: rotate(-2deg);
+      margin-bottom: 20px;
+    }
+
+    /* 메인 히어로 */
+    .hero-box {
+      background: var(--card);
+      border: 3.5px solid var(--black);
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 36px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1.2px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .highlight {
+      background: var(--accent-butter);
+      padding: 2px 10px;
+      border: 2.5px solid var(--black);
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 3px 3px 0px var(--black);
+    }
+    .hero-p {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .contact-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .c-chip {
+      background: #FDFBF7;
+      border: 2px solid var(--black);
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 2.5px 2.5px 0px var(--black);
+    }
+
+    /* 벤토 그리드 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 3px solid var(--black);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    .card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0px var(--black);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border: 2px solid var(--black);
+      border-radius: 6px;
+      margin-bottom: 12px;
+      box-shadow: 2px 2px 0px var(--black);
+    }
+    .t-coral { background: var(--accent-coral); color: #fff; }
+    .t-sage { background: var(--accent-sage); color: #fff; }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .fact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fact-item {
+      background: #FAF9F5;
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      padding: 12px 14px;
+      box-shadow: 2px 2px 0px var(--black);
+    }
+    .fact-item strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--accent-coral);
+      margin-bottom: 2px;
+    }
+    .fact-item p {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #444;
+    }
+
+    /* 독기 스토리 섹션 */
+    .spicy-card {
+      grid-column: span 2;
+      background: #FAF7F0;
+    }
+    .punchline-box {
+      background: #fff;
+      border: 2.5px solid var(--black);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      box-shadow: 3px 3px 0px var(--black);
+    }
+    .punchline-box h4 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--accent-coral);
+      margin-bottom: 6px;
+    }
+    .punchline-box p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 하단 CTA */
+    .cta-banner {
+      background: var(--black);
+      color: #fff;
+      border: 3.5px solid var(--black);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 8px 8px 0px var(--accent-coral);
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .cta-btn {
+      background: var(--accent-butter);
+      color: var(--black);
+      border: 2.5px solid #fff;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 4px 4px 0px #fff;
+      transition: all 0.15s;
+    }
+    .cta-btn:hover {
+      background: var(--accent-coral);
+      color: #fff;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #fff;
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .spicy-card { grid-column: span 1; }
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="top-badge">⚡ VER.2 패기 충만 에디션</div>
+
+    <!-- 헤더 -->
+    <header class="hero-box">
+      <h1>남들 다 쓰는 뻔한 이력서,<br><span class="highlight">솔직히 읽기 재미없잖아요? 🥱</span></h1>
+      <p class="hero-p">
+        "재미없으면 클릭도 안 합니다. 노출 백날 나와봐야 안 사면 끝이잖아요?"<br>
+        저는 <strong>전환(Conversion)에 미친 마케터 정민교</strong>입니다!
+      </p>
+
+      <div class="contact-chips">
+        <span class="c-chip">🔥 010-4785-3020</span>
+        <span class="c-chip">✉️ apcde@naver.com</span>
+        <span class="c-chip">🏆 Google 공식 인증 보유</span>
+        <span class="c-chip">🤖 AI 역량진단 99점 A등급</span>
+      </div>
+    </header>
+
+    <!-- 벤토 그리드 -->
+    <div class="grid">
+      <!-- 역량 -->
+      <div class="card">
+        <span class="card-tag t-coral">WEAPONS 🛠️</span>
+        <h3>말만 번지르르한 건 질색입니다</h3>
+        <div class="fact-list">
+          <div class="fact-item">
+            <strong>🎬 1인 영상 제작? 촬영부터 편집까지 혼자 다 칩니다</strong>
+            <p>Sony A7M3 들고 조명 치고 프리미어로 1분 컷 광고 뽑아냅니다.</p>
+          </div>
+          <div class="fact-item">
+            <strong>🤖 생성형 AI? 그냥 툴 다루는 게 아니라 캐릭터를 창조합니다</strong>
+            <p>GPT로 다방향 시트 뽑고 Higgsfield로 60초 광고 영상 만듭니다.</p>
+          </div>
+          <div class="fact-item">
+            <strong>📈 감으로 마케팅 안 합니다. 데이터로 팹니다</strong>
+            <p>GA4, GTM 태그 세팅하고 Meta 광고 돌려서 전환율(CVR)로 증명합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 이력 -->
+      <div class="card">
+        <span class="card-tag t-sage">HISTORY 💥</span>
+        <h3>책상머리 공부 말고 진짜 굴렀습니다</h3>
+        <div class="fact-list">
+          <div class="fact-item">
+            <strong>지오코칭 (인턴)</strong>
+            <p>국민취업제도 AI 캐릭터 만들고 Vrew 숏폼 뽑아서 인스타 광고 바로 태웠습니다.</p>
+          </div>
+          <div class="fact-item">
+            <strong>영등포구청 홍보미디어과</strong>
+            <p>형식 파괴! 시민 눈높이에 맞는 숏폼과 카드뉴스로 도배했습니다.</p>
+          </div>
+          <div class="fact-item">
+            <strong>지니스 커뮤니케이션</strong>
+            <p>공포영화 &lt;프레디의 피자가게&gt; 괴기 알바 공고로 위장해 CGV 주변 휩쓸었습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 자기소개 독기 -->
+      <div class="card spicy-card">
+        <span class="card-tag t-coral">WHY ME? 🍕</span>
+        <h3>제가 왜 다른 신입들이랑 다른지 딱 2가지만 말씀드릴게요</h3>
+
+        <div class="punchline-box">
+          <h4>01. 망해봤으니까 압니다 (동생 야식집 폐업)</h4>
+          <p>
+            "맛있으면 손님이 오겠지?" 하다가 1년 만에 동생 가게 접었습니다. 진짜 처절하게 배웠습니다. 
+            아무리 상품이 좋아도 고객의 결핍을 건드려 문을 열고 들어오게 만드는 <strong>'마케팅 전환 설계'</strong>가 없으면 무조건 망한다는 걸요!
+          </p>
+        </div>
+
+        <div class="punchline-box">
+          <h4>02. 안 되면 될 때까지 툴 뜯어고칩니다</h4>
+          <p>
+            선글라스 광고 만들 때 AI가 맘에 안 든다고 징징대지 않았습니다. Midjourney 버리고 FLUX, NANO BANANA 뒤져서 기어코 광고주가 "오 이거다!" 할 때까지 들이받았습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h2>"이 정도 패기 있는 놈, 면접 안 불러보실 거예요?"</h2>
+      <p style="margin-bottom:20px; color:#ccc; font-weight:700;">커피 한 잔 사주시면 매출 올릴 마케팅 기획서 들고 바로 뜁니다.</p>
+      <button class="cta-btn" onclick="alert('🔥 면접 제안 콜! 전화 주시면 30분 안에 튀어갑니다: 010-4785-3020')">
+        📞 지금 당장 면접 잡기 (Click!)
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>

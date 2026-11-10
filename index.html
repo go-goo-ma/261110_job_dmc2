@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민교 | 정돈된 키치 & 전환 중심 마케터</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800&family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 상단 네비게이션 (깔끔하고 정돈된 캡슐 바) -->
+  <header class="header-wrap">
+    <nav class="navbar">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-pill">⚡ MINGYO</span>
+        <span class="brand-sub">PORTFOLIO</span>
+      </a>
+      <div class="nav-menu">
+        <a href="#about" class="nav-item">스토리</a>
+        <a href="#skills" class="nav-item">스킬셋</a>
+        <a href="#projects" class="nav-item">프로젝트 4선</a>
+        <a href="#playground" class="nav-item nav-highlight">마케팅 플레이존 🎮</a>
+        <a href="#timeline" class="nav-item">히스토리</a>
+      </div>
+      <a href="#contact" class="btn btn-nav">커피챗 문의 ☕</a>
+    </nav>
+  </header>
+
+  <!-- 1. 히어로 섹션 (정돈된 키치: 볼드한 타이포 + 정돈된 벤토 그리드) -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      
+      <!-- 히어로 상단 헤더 -->
+      <div class="hero-intro">
+        <div class="kitsch-tag-row">
+          <span class="badge badge-yellow">🎯 Conversion-First Marketer</span>
+          <span class="badge badge-pink">🤖 AI Prompt & Video Specialist</span>
+          <span class="badge badge-mint">🏆 Google AdWords Certified</span>
+        </div>
+        <h1 class="hero-headline">
+          콘텐츠를 <span class="mark-word mark-yellow">전환(Conversion)</span>으로<br>
+          증명하는 마케터 <span class="mark-name">정민교</span>입니다.
+        </h1>
+        <p class="hero-lead">
+          단순한 '보기 좋은 노출'에 멈추지 않습니다.<br>
+          <strong>소비자 인사이트</strong>에서 질문(Why)을 찾고, <strong>AI와 영상</strong>으로 설득력 있는 메시지를 빚어내며,<br>
+          <strong>데이터와 퍼포먼스</strong>로 실제 고객의 행동과 구매 전환을 만들어냅니다.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">프로젝트 4선 바로보기 🚀</a>
+          <a href="#playground" class="btn btn-accent">마케팅 게임 즐기기 🎮</a>
+          <button class="btn btn-outline" onclick="copyContact('email')">📧 이메일 복사</button>
+        </div>
+      </div>
+
+      <!-- 정돈된 벤토 그리드 (3대 핵심 강점) -->
+      <div class="bento-grid">
+        <div class="bento-card bento-yellow">
+          <div class="bento-top">
+            <span class="bento-icon">💡</span>
+            <span class="bento-label">STRATEGY</span>
+          </div>
+          <h3>인사이트 기반 기획 (Why)</h3>
+          <p>"기획이 없으면 좋은 결과도 없다." 타깃 세대의 결핍과 문화적 맥락에서 선택의 명분을 찾아냅니다.</p>
+        </div>
+
+        <div class="bento-card bento-purple">
+          <div class="bento-top">
+            <span class="bento-icon">🎬</span>
+            <span class="bento-label">CREATIVE</span>
+          </div>
+          <h3>AI & 1인 영상 프로덕션</h3>
+          <p>Sony A7M3 촬영부터 Midjourney, Higgsfield 모션, CapCut 후반작업까지 원스톱으로 시각화합니다.</p>
+        </div>
+
+        <div class="bento-card bento-mint">
+          <div class="bento-top">
+            <span class="bento-icon">📊</span>
+            <span class="bento-label">PERFORMANCE</span>
+          </div>
+          <h3>데이터 & 전환 퍼널 최적화</h3>
+          <p>GA4, GTM, Meta 광고 세팅 및 A/B 테스트로 단순 조회를 실구매와 리드로 연결하는 구조를 설계합니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. 소개 및 가치관 (MY STORY) -->
+  <section id="about" class="section bg-warm">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">MY STORY & PHILOSOPHY</span>
+        <h2 class="section-heading">실패와 실무에서 배운 '전환의 본질'</h2>
+        <p class="section-sub">도구에 앞서 고객의 마음을 움직이는 이유를 먼저 정의합니다.</p>
+      </div>
+
+      <div class="story-bento">
+        <!-- 스토리 1 -->
+        <div class="story-card">
+          <div class="story-num">01</div>
+          <div class="story-content">
+            <span class="story-category">TURNING POINT</span>
+            <h3>동생 야식 가게의 폐업에서 배운 전환의 절실함</h3>
+            <p>
+              약 1년간 동생의 야식 가게 운영을 도우며 맞이한 폐업은 제 인생의 가장 큰 배움이었습니다. 아무리 훌륭한 음식과 정성이 있어도, 고객의 발걸음과 재방문으로 이어지는 <strong>‘전환의 연결 구조’</strong>가 없으면 생존할 수 없음을 뼈저리게 체감하며 마케팅의 길로 뛰어들었습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 스토리 2 -->
+        <div class="story-card">
+          <div class="story-num">02</div>
+          <div class="story-content">
+            <span class="story-category">PUBLIC MEDIA</span>
+            <h3>영등포구청 미디어 실무에서 배운 타깃 중심성</h3>
+            <p>
+              영등포구청 홍보미디어과에서 시민을 위한 정책 홍보 콘텐츠를 제작하며, "좋은 지원 제도가 있어도 정작 필요한 사람에게 닿지 못하면 무용지물"이라는 현실을 목격했습니다. 마케팅이란 필요한 사람에게 가장 와닿는 언어로 행동을 유도하는 것임을 확신했습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- 스토리 3 -->
+        <div class="story-card">
+          <div class="story-num">03</div>
+          <div class="story-content">
+            <span class="story-category">PROBLEM SOLVER</span>
+            <h3>도구에 매몰되지 않고 목적에 맞는 최선의 수단 탐색</h3>
+            <p>
+              Midjourney로 생성한 선글라스 광고 이미지가 광고주와 맞지 않았을 때, 실망 대신 FLUX, NANO BANANA, ChatGPT를 비교 분석하여 브랜드 톤에 딱 맞는 결과물을 도출해냈습니다. 팀의 공통 목표와 기준을 위해 유연하게 최선의 방법을 찾아냅니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 스킬셋 인벤토리 -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">SKILL INVENTORY</span>
+        <h2 class="section-heading">아이디어를 결과물로 증명하는 멀티 툴킷 🧰</h2>
+        <p class="section-sub">기획부터 콘텐츠 제작, AI 활용, 데이터 분석까지의 역량입니다.</p>
+      </div>
+
+      <div class="skills-card-grid">
+        <!-- 1. 영상 & 촬영 -->
+        <div class="skill-box">
+          <div class="skill-header">
+            <span class="skill-icon">🎥</span>
+            <h4>영상 디렉팅 & 편집</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="chip chip-main">Premiere Pro (중급)</span>
+            <span class="chip">CapCut 숏폼/릴스</span>
+            <span class="chip">Sony A7M3 카메라</span>
+            <span class="chip">Godox 지속광 조명</span>
+            <span class="chip">Lightroom 색보정</span>
+          </div>
+        </div>
+
+        <!-- 2. AI 크리에이티브 -->
+        <div class="skill-box">
+          <div class="skill-header">
+            <span class="skill-icon">🔮</span>
+            <h4>생성형 AI 크리에이터</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="chip chip-main">ChatGPT 프롬프트 엔지니어링</span>
+            <span class="chip">Midjourney & FLUX</span>
+            <span class="chip">Higgsfield AI 비디오</span>
+            <span class="chip">Suno AI 음원/밈송</span>
+            <span class="chip">Google AI Studio</span>
+          </div>
+        </div>
+
+        <!-- 3. 퍼포먼스 마케팅 -->
+        <div class="skill-box">
+          <div class="skill-header">
+            <span class="skill-icon">📈</span>
+            <h4>퍼포먼스 & 데이터 분석</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="chip chip-main">Google AdWords 공인인증</span>
+            <span class="chip">Meta 광고 세팅/입찰</span>
+            <span class="chip">Google GA4 & GTM</span>
+            <span class="chip">네이버 검색광고 (SA)</span>
+            <span class="chip">A/B 테스트 퍼널 분석</span>
+          </div>
+        </div>
+
+        <!-- 4. 기획 및 디자인 -->
+        <div class="skill-box">
+          <div class="skill-header">
+            <span class="skill-icon">🎨</span>
+            <h4>비주얼 & 협업 툴</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="chip">Figma UI/UX 기획</span>
+            <span class="chip">Photoshop & MiriCanvas</span>
+            <span class="chip">Google Workspace</span>
+            <span class="chip">Gamma 프레젠테이션</span>
+            <span class="chip">Vibe Coding 프로토타이핑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 대표 프로젝트 4선 -->
+  <section id="projects" class="section bg-warm">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">KEY PROJECTS</span>
+        <h2 class="section-heading">대표 프로젝트 4선 : 문제 진단과 솔루션 🏆</h2>
+        <p class="section-sub">카드를 클릭하시면 상세 기획안과 제작 비하인드를 확인하실 수 있습니다.</p>
+      </div>
+
+      <!-- 프로젝트 필터 -->
+      <div class="filter-bar">
+        <button class="filter-tab active" data-filter="all">전체 프로젝트 (4)</button>
+        <button class="filter-tab" data-filter="strategy">브랜드 전략 기획 (2)</button>
+        <button class="filter-tab" data-filter="creative">AI & 비디오 프로덕션 (2)</button>
+      </div>
+
+      <div class="project-grid">
+        <!-- 1. 젤리캣 (Masterpiece) -->
+        <div class="project-item" data-category="strategy" onclick="openModal('jellycat')">
+          <div class="project-badge-bar">
+            <span class="status-badge badge-fire">⭐ BEST STRATEGY</span>
+            <span class="author-badge">1인 가내수공업 기획 (기여도 100%)</span>
+          </div>
+          <div class="project-visual bg-jellycat">
+            <div class="visual-deco-icons">
+              <span>🐰</span><span>🐯</span><span>🐲</span>
+            </div>
+            <span class="visual-label">신당동 팝업 × 12지신 키링</span>
+          </div>
+          <div class="project-body">
+            <span class="project-date">2025 · 젤리캣 한국 런칭 전략 기획안 (30장 분량)</span>
+            <h3 class="project-name">젤리캣 (Jellycat) 한국 공식 런칭 & 12지 키링 제안</h3>
+            <p class="project-desc">
+              "애착인형에서 나를 표현하는 키링으로!" 타깃 생애주기와 젠지 세대의 사주/운세 문화에 착안해 한국 전용 12지 키링과 무속 신앙 역사 맥락의 신당동 팝업스토어 & 인형 복원 CRM 설계.
+            </p>
+            <div class="project-meta-tags">
+              <span>#타깃생애주기분석</span>
+              <span>#사주12지신</span>
+              <span>#신당동팝업</span>
+              <span>#CRM복원케어</span>
+            </div>
+            <button class="btn btn-detail">상세 기획서 열람 🔍</button>
+          </div>
+        </div>
+
+        <!-- 2. 스너글 AI 영상 -->
+        <div class="project-item" data-category="creative" onclick="openModal('snuggle')">
+          <div class="project-badge-bar">
+            <span class="status-badge badge-ai">🤖 AI CREATIVE</span>
+            <span class="author-badge">6인 팀 (기여도 30%)</span>
+          </div>
+          <div class="project-visual bg-snuggle">
+            <span class="visual-single-icon">🧸</span>
+            <span class="visual-label">ChatGPT 시트 × Higgsfield 영상</span>
+          </div>
+          <div class="project-body">
+            <span class="project-date">2026.07 · AI 활용 숏폼 광고 영상 제작</span>
+            <h3 class="project-name">스너글 (Snuggle) AI 마스코트 광고 영상</h3>
+            <p class="project-desc">
+              기능성 소구 일색인 섬유유연제 시장에서 유일한 캐릭터 자산인 '스너글 베어'를 전면에 배치. GPT 다방향 시트로 캐릭터 일관성을 잡고 Higgsfield OMNI로 자연스러운 움직임 연출.
+            </p>
+            <div class="project-meta-tags">
+              <span>#캐릭터일관성확보</span>
+              <span>#Higgsfield</span>
+              <span>#20대여성타깃</span>
+              <span>#CapCut</span>
+            </div>
+            <button class="btn btn-detail">제작 과정 보기 🔍</button>
+          </div>
+        </div>
+
+        <!-- 3. 키톡스 마스크팩 -->
+        <div class="project-item" data-category="creative" onclick="openModal('kitox')">
+          <div class="project-badge-bar">
+            <span class="status-badge badge-video">🎬 VIDEO CAMPAIGN</span>
+            <span class="author-badge">3인 팀 (기여도 30%)</span>
+          </div>
+          <div class="project-visual bg-kitox">
+            <span class="visual-single-icon">💧</span>
+            <span class="visual-label">기획 · 촬영 · 현장 조연출</span>
+          </div>
+          <div class="project-body">
+            <span class="project-date">2024.07 · 뷰티 브랜드 영상 광고 제작</span>
+            <h3 class="project-name">뷰티 브랜드 KITOX 마스크팩 홍보 영상</h3>
+            <p class="project-desc">
+              와디즈 1위 및 평점 4.9의 제품력에도 낮은 인지도를 겪던 문제를 해결. 시술 부작용과 고비용에 망설이는 3040 타깃에게 "주름을 지우는 열쇠, 키톡스"라는 직관적 홈케어 메시지 전달.
+            </p>
+            <div class="project-meta-tags">
+              <span>#3040홈케어</span>
+              <span>#네이버쇼핑리뷰400개목표</span>
+              <span>#포지셔닝</span>
+              <span>#현장촬영</span>
+            </div>
+            <button class="btn btn-detail">캠페인 전략 보기 🔍</button>
+          </div>
+        </div>
+
+        <!-- 4. KT M 모바일 -->
+        <div class="project-item" data-category="strategy" onclick="openModal('ktm')">
+          <div class="project-badge-bar">
+            <span class="status-badge badge-yellow">⭐ 1인 단독 (100%)</span>
+            <span class="author-badge">기획·촬영·편집 전 과정</span>
+          </div>
+          <div class="project-visual bg-ktm">
+            <span class="visual-single-icon">📱</span>
+            <span class="visual-label">Sony A7M3 1인 프로덕션</span>
+          </div>
+          <div class="project-body">
+            <span class="project-date">2022 · 알뜰폰 요금제 2030 프로모션 영상</span>
+            <h3 class="project-name">KT M 모바일 2030 타깃 광고 영상</h3>
+            <p class="project-desc">
+              '효도폰' 편견을 벗고 합리적 소비를 즐기는 MZ세대를 위해 복잡한 요금제 대신 F&B(커피, 배민) 일상 혜택을 전면 소구. "기획의 Why가 선행되어야 한다"는 마케터의 교훈을 얻은 프로젝트.
+            </p>
+            <div class="project-meta-tags">
+              <span>#MZ알뜰폰</span>
+              <span>#일상F&B혜택</span>
+              <span>#기획철학정립</span>
+              <span>#A7M3</span>
+            </div>
+            <button class="btn btn-detail">인사이트 리뷰 🔍</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ★ 신규 추가 ★ 마케팅 인터랙티브 플레이존 (정돈된 키치 게임 3종!) -->
+  <section id="playground" class="section playground-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag tag-game">INTERACTIVE PLAYGROUND</span>
+        <h2 class="section-heading">마케터 정민교의 인터랙티브 플레이존 🎮</h2>
+        <p class="section-sub">기획과 마케팅 노하우를 직접 체험해보는 3가지 미니 인터랙션입니다.</p>
+      </div>
+
+      <!-- 게임 선택 탭 -->
+      <div class="game-nav-tabs">
+        <button class="game-tab-btn active" onclick="switchGame('fortune')">
+          <span>🔮 젤리캣 12지신 운세</span>
+        </button>
+        <button class="game-tab-btn" onclick="switchGame('abtest')">
+          <span>⚖️ 마케팅 A/B 테스트 퀴즈</span>
+        </button>
+        <button class="game-tab-btn" onclick="switchGame('vending')">
+          <span>🤖 AI 프롬프트 자판기</span>
+        </button>
+      </div>
+
+      <!-- 게임 1: 젤리캣 12지신 운세 뽑기 (비주얼/인터랙션 대폭 강화) -->
+      <div id="game-fortune" class="game-panel active">
+        <div class="panel-card">
+          <div class="game-badge">JELLYCAT X 12간지 LUCK</div>
+          <h3>오늘 당신의 마케팅 수호 12지신 키링은? ✨</h3>
+          <p class="game-intro-text">
+            정민교 마케터의 대표작 <strong>[젤리캣 한국 12지 키링]</strong>에서 영감을 받은 미니 인터랙션입니다.<br>
+            버튼을 눌러 오늘의 마케팅 행운 메시지와 인사이트 팁을 확인하세요!
+          </p>
+
+          <div class="fortune-slot-machine" id="fortuneCardBox">
+            <div class="fortune-circle-icon" id="fortuneEmoji">🐰</div>
+            <div class="fortune-title-name" id="fortuneName">지혜로운 토끼 키링</div>
+            <div class="fortune-main-quote" id="fortuneQuote">"작은 디테일 하나가 고객의 마음을 사로잡고 엄청난 전환율을 만듭니다!"</div>
+            <div class="fortune-action-badge" id="fortuneTip">💡 오늘의 추천 액션: A/B 테스트에서 CTA 버튼 문구를 위트있게 수정해보세요.</div>
+          </div>
+
+          <button class="btn btn-primary btn-game" onclick="drawFortune()">
+            🎲 다른 12지신 키링 다시 뽑기!
+          </button>
+        </div>
+      </div>
+
+      <!-- 게임 2: 마케팅 A/B 테스트 퀴즈 (실제 포트폴리오 기반) -->
+      <div id="game-abtest" class="game-panel">
+        <div class="panel-card">
+          <div class="game-badge">A/B TESTING LAB</div>
+          <h3>실제 데이터로 검증하는 '전환율 승자 맞히기' ⚖️</h3>
+          <p class="game-intro-text">
+            마케터 정민교가 수행한 프로젝트 속 실제 카피 & 기획 대결! 어떤 안이 고객의 행동을 이끌어냈을까요?
+          </p>
+
+          <div class="quiz-container" id="quizContainer">
+            <div class="quiz-progress-bar">
+              <span id="quizStepText">문제 1 / 3</span>
+              <span id="quizScoreText">내 점수: 0점</span>
+            </div>
+
+            <div class="quiz-question-box" id="quizQuestionBox">
+              <span class="quiz-brand-tag" id="quizBrandTag">뷰티 브랜드 KITOX</span>
+              <h4 id="quizQuestion">3040 직장인을 타깃으로 한 마스크팩 광고, 더 높은 반응을 얻은 카피는?</h4>
+            </div>
+
+            <div class="quiz-options-grid">
+              <button class="quiz-btn" id="optionA" onclick="checkQuizAnswer('A')">
+                <span class="opt-label">A안</span>
+                <span class="opt-text" id="textOptionA">"고기능성 하이드로파이버 특허 성분 마스크팩"</span>
+              </button>
+              <button class="quiz-btn" id="optionB" onclick="checkQuizAnswer('B')">
+                <span class="opt-label">B안</span>
+                <span class="opt-text" id="textOptionB">"시술은 망설여지고 화장품은 아쉬울 때, 주름을 지우는 열쇠"</span>
+              </button>
+            </div>
+
+            <div class="quiz-result-feedback" id="quizFeedback" style="display:none;">
+              <div class="feedback-badge" id="feedbackBadge">🎉 정답입니다!</div>
+              <p class="feedback-desc" id="feedbackDesc">설명</p>
+              <button class="btn btn-accent btn-small" id="quizNextBtn" onclick="nextQuiz()">다음 문제 풀기 ➡️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 게임 3: AI 마케팅 프롬프트 자판기 -->
+      <div id="game-vending" class="game-panel">
+        <div class="panel-card">
+          <div class="game-badge">AI PROMPT VENDING MACHINE</div>
+          <h3>정민교 마케터의 AI 프롬프트 자판기 🤖</h3>
+          <p class="game-intro-text">
+            타깃과 목표 콘텐츠를 선택하면, 실무에서 직접 검증한 고밀도 프롬프트 레시피가 즉시 출력됩니다!
+          </p>
+
+          <div class="vending-controls">
+            <div class="select-group">
+              <label>타깃 대상:</label>
+              <select id="vendingTarget" class="vending-select">
+                <option value="genz">20대 젠지·잘파 세대</option>
+                <option value="3040">3040 실용주의 직장인</option>
+                <option value="parents">육아 부모 세대</option>
+              </select>
+            </div>
+
+            <div class="select-group">
+              <label>제작 목표:</label>
+              <select id="vendingGoal" class="vending-select">
+                <option value="character">캐릭터 다방향 턴어라운드 시트 (ChatGPT)</option>
+                <option value="motion">60초 숏폼 광고 모션 (Higgsfield)</option>
+                <option value="copy">전환 중심 인스타 광고 카피 (AIDA 퍼널)</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" onclick="vendPrompt()">
+              🥤 프롬프트 뽑기!
+            </button>
+          </div>
+
+          <div class="vending-output-box" id="vendingOutput">
+            <div class="output-header">
+              <span class="output-title" id="outTitle">📌 20대 젠지 타깃 캐릭터 시트 프롬프트</span>
+              <button class="btn btn-outline btn-small" onclick="copyVendPrompt()">📋 프롬프트 복사</button>
+            </div>
+            <pre class="output-code" id="outPrompt">버튼을 누르시면 실무 프롬프트가 여기에 표시됩니다.</pre>
+            <div class="output-tip" id="outTip">💡 실무 팁: 정민교 마케터가 스너글 AI 광고 제작 시 실제로 사용했던 노하우입니다.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. 경력 & 여정 타임라인 -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">JOURNEY</span>
+        <h2 class="section-heading">꾸준히 확장해온 실무와 학습의 궤적 🚀</h2>
+        <p class="section-sub">영상 제작 기초부터 공공 미디어, AI 프롬프트, 퍼포먼스 마케팅까지</p>
+      </div>
+
+      <div class="clean-timeline">
+        <!-- 2026 청년취업사관학교 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2026.05 ~ 09</span>
+            <span class="t-badge badge-now">최신 수료</span>
+          </div>
+          <div class="t-card">
+            <h4>청년취업사관학교 강서캠퍼스</h4>
+            <div class="t-sub">AI 활용 콘텐츠 퍼포먼스 마케팅 전문가 과정</div>
+            <p>실제 기업(커피사피엔스 등) 마케팅 과제 수행, GA4 유입 분석, GTM 태그 세팅, Meta 광고 세팅 및 입찰 최적화, 생성형 AI(Suno, Higgsfield) 연계 콘텐츠 제작.</p>
+          </div>
+        </div>
+
+        <!-- 2025 지오코칭 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2025.07 ~ 10</span>
+            <span class="t-badge">인턴/수습 (4개월)</span>
+          </div>
+          <div class="t-card">
+            <h4>지오코칭 교육기획팀</h4>
+            <div class="t-sub">콘텐츠 마케팅 & 인스타그램·블로그 운영</div>
+            <p>국민취업제도 홍보용 AI 자사 캐릭터 제작, Vrew 활용 숏폼 광고 소재 2편 제작, 인스타그램 Meta 광고 집행 및 사업제안서·온보딩 PPT 제작.</p>
+          </div>
+        </div>
+
+        <!-- 2025 서울시 매력일자리 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2025.04 ~ 06</span>
+            <span class="t-badge">전문 교육</span>
+          </div>
+          <div class="t-card">
+            <h4>서울시 매력일자리 / 하이서울기업협회</h4>
+            <div class="t-sub">AI 퍼포먼스 마케팅 실무과정</div>
+            <p>ChatGPT, Midjourney, FLUX 프롬프트 엔지니어링, Sora/Kling AI 영상 실습, CARIN 선글라스 모델 생성, 젤리캣 한국 런칭 전략 기획안 수립.</p>
+          </div>
+        </div>
+
+        <!-- 2024 영등포구청 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2024.04 ~ 12</span>
+            <span class="t-badge">실무 경력 (9개월)</span>
+          </div>
+          <div class="t-card">
+            <h4>영등포구청 홍보미디어과</h4>
+            <div class="t-sub">서울시 뉴딜일자리 청년 영상미디어·홍보 전문가</div>
+            <p>DSLR 및 스마트폰 카메라 활용 1인 영상 기획·촬영·편집, 시민 참여형 SNS 홍보 콘텐츠 및 카드뉴스·홍보물 다수 제작.</p>
+          </div>
+        </div>
+
+        <!-- 2023 미래내일 일경험 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2023.07 ~ 10</span>
+            <span class="t-badge">프로젝트 실무</span>
+          </div>
+          <div class="t-card">
+            <h4>미래내일 일경험 (지니스 커뮤니케이션)</h4>
+            <div class="t-sub">영화 &lt;프레디의 피자가게1&gt; 개봉 전 사전 마케팅</div>
+            <p>수능 다음날 개봉 제약 속에서 1020 여성 타깃 대상 오프라인 벽보(아르바이트 구인 위장형) + QR/SNS 연동 프로모션 기획, 서울 시내 대형 CGV 배포.</p>
+          </div>
+        </div>
+
+        <!-- 2022 방송정보국제교육원 -->
+        <div class="timeline-row">
+          <div class="t-date-col">
+            <span class="t-date">2022.05 ~ 07</span>
+            <span class="t-badge">영상 시작점</span>
+          </div>
+          <div class="t-card">
+            <h4>방송정보국제교육원</h4>
+            <div class="t-sub">서울지역혁신사업 영상 기획·촬영·편집 실무</div>
+            <p>Sony A7M3 등 전문 장비 및 지속광 조명 이해, 프리미어 프로 영상 편집 실무, 광고 영상 2편(KT M 모바일 등) 기획·제작.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 푸터 및 컨택트 -->
+  <footer id="contact" class="footer-wrap">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-header">
+          <span class="section-tag">LET'S TALK</span>
+          <h2>콘텐츠로 전환을 증명할 마케터를 찾으시나요?</h2>
+          <p>
+            생성형 AI로 제작 비용과 시간은 획기적으로 줄이고, 명확한 고객 인사이트로 전환율을 극대화합니다.<br>
+            편하게 연락 주시면 기분 좋은 대화로 찾아뵙겠습니다.
+          </p>
+        </div>
+
+        <div class="contact-links-grid">
+          <div class="c-link-card" onclick="copyContact('email')">
+            <span class="c-icon">✉️</span>
+            <div class="c-text">
+              <span class="c-label">이메일 주소</span>
+              <strong class="c-val">apcde@naver.com</strong>
+            </div>
+            <span class="c-btn-hint">복사하기</span>
+          </div>
+
+          <div class="c-link-card" onclick="copyContact('phone')">
+            <span class="c-icon">📞</span>
+            <div class="c-text">
+              <span class="c-label">휴대전화</span>
+              <strong class="c-val">010-4785-3020</strong>
+            </div>
+            <span class="c-btn-hint">복사하기</span>
+          </div>
+
+          <div class="c-link-card">
+            <span class="c-icon">📍</span>
+            <div class="c-text">
+              <span class="c-label">근무 가능 지역</span>
+              <strong class="c-val">서울 전역 / 금천구</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copy">
+          <p>© 2026 Jeong Mingyo. Refined Kitsch Neo-Brutalism Design.</p>
+          <p class="footer-skills-info">Powered by Frontend-Design & Theme-Factory Skills</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 프로젝트 상세 모달 -->
+  <div class="modal-backdrop" id="projectModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content-area" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- 토스트 노티스 -->
+  <div class="toast-bar" id="toastNotice">📋 클립보드에 복사되었습니다!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

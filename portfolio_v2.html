@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민교 VER.2 | 재미없으면 안 팔리잖아! 🔥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700;800;900&family=Pretendard:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* 
+      [컬러 역할 명확화 60-30-10 법칙]
+      - 60% 베이스: 묵직하고 깊은 오프블랙 (#0E1015)
+      - 30% 표면/카드: 가독성 높은 슬레이트 네이비블랙 (#161922)
+      - 10% 확실한 펀치 액센트: 
+         • 메인 킬러: 볼드 일렉트릭 라임 (#D4FF00) - 도발적인 패기
+         • 서브 후킹: 브릭 오렌지 (#FF522B) - 행동 유도 버튼
+    */
+    :root {
+      --bg: #0E1015;
+      --card: #161922;
+      --card-border: #262B38;
+      --card-hover-border: #D4FF00;
+      
+      --accent-lime: #D4FF00;   /* 눈에 팍 꽂히는 라임 옐로우 */
+      --accent-fire: #FF522B;   /* 강렬한 브릭 오렌지 */
+      
+      --text-pure: #FFFFFF;
+      --text-main: #E2E8F0;
+      --text-sub: #8E9BAE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Pretendard', sans-serif;
+      padding: 60px 20px;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    /* 상단 헤더: 시선 집중 */
+    .hero-panel {
+      border: 2px solid var(--accent-lime);
+      background: var(--card);
+      border-radius: 24px;
+      padding: 44px 36px;
+      margin-bottom: 50px;
+      box-shadow: 8px 8px 0px rgba(212, 255, 0, 0.15);
+      position: relative;
+    }
+    .pill-tag {
+      display: inline-block;
+      background: var(--accent-lime);
+      color: #000;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 900;
+      padding: 5px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      transform: rotate(-1deg);
+    }
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      color: var(--text-pure);
+      margin-bottom: 14px;
+    }
+    .pop-text {
+      color: var(--accent-lime);
+      text-decoration: underline wavy var(--accent-fire);
+      text-underline-offset: 8px;
+    }
+    .hero-sub {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      max-width: 820px;
+      line-height: 1.6;
+    }
+    .hero-sub strong {
+      color: var(--text-pure);
+    }
+
+    /* 프로젝트 4선 그리드 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 50px;
+    }
+
+    .p-box {
+      background: var(--card);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .p-box:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.4), 0 0 0 1px var(--accent-lime);
+    }
+
+    /* 프로젝트 번호 태그 */
+    .box-badge {
+      position: absolute;
+      top: -14px;
+      left: 26px;
+      background: #000;
+      border: 1.5px solid var(--accent-lime);
+      color: var(--accent-lime);
+      font-family: 'Fredoka', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 900;
+      padding: 3px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .box-title {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--text-pure);
+      margin: 10px 0 6px;
+      line-height: 1.35;
+    }
+    .box-quote {
+      font-size: 1.05rem;
+      color: var(--accent-lime);
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    /* 대비가 또렷한 팩트 카드 */
+    .fact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .fact-row {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: border-color 0.2s;
+    }
+    .fact-row:hover {
+      border-color: rgba(212, 255, 0, 0.4);
+    }
+    .fact-label {
+      font-size: 0.76rem;
+      font-weight: 900;
+      color: var(--accent-fire);
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+    .fact-content {
+      font-size: 0.94rem;
+      color: var(--text-main);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* 시선 끄는 펀치 액션 버튼 */
+    .btn-fire {
+      background: var(--accent-fire);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .btn-fire:hover {
+      background: #FF380D;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(255, 82, 43, 0.4);
+    }
+
+    /* 하단 펀치라인 배너 */
+    .bottom-punch {
+      background: var(--card);
+      border: 2px solid var(--card-border);
+      border-radius: 24px;
+      padding: 44px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .bottom-punch h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--text-pure);
+      margin-bottom: 12px;
+    }
+    .punch-quote {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      background: #000;
+      border: 1.5px solid var(--accent-lime);
+      color: var(--accent-lime);
+      border-radius: 14px;
+      padding: 16px 24px;
+      display: inline-block;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="hero-panel">
+      <span class="pill-tag">⚡ VER.2 패기 & 전환 에디션</span>
+      <h1>남들 하는 마케팅,<br><span class="pop-text">솔직히 너무 재미없잖아! 🥱</span></h1>
+      <p class="hero-sub">
+        "인형을 인형으로만 파니까 비싸다고 욕먹는 거고, 스펙만 읊어대니까 스크롤을 휙휙 넘기는 겁니다.<br>
+        <strong>뒤통수를 치는 발칙한 기획과 집요한 데이터</strong>로 고객 지갑을 열어버립니다!"
+      </p>
+    </div>
+
+    <!-- 프로젝트 4선 -->
+    <div class="grid">
+
+      <!-- 1. 젤리캣 -->
+      <article class="p-box">
+        <span class="box-badge">PROJECT 01</span>
+        <h2 class="box-title">젤리캣 12지신 사주 키링 × 신당동 팝업</h2>
+        <div class="box-quote">"인형이 6만 원? 미쳤냐 소리 듣기 전에 '사주'를 팔아먹었습니다"</div>
+
+        <div class="fact-cards">
+          <div class="fact-row">
+            <div class="fact-label">🚨 팩트 폭격</div>
+            <p class="fact-content">영국 인형 들어오면서 200% 비싸짐. "한국 호구로 보나?" 욕먹을 게 뻔했음.</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">💡 도발적 기획</div>
+            <p class="fact-content">"너희 사주·띠 운세에 환장하잖아?" 20대 젠지 취향 저격 12지신 키링으로 둔갑!</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">🎪 미친 장소 선정</div>
+            <p class="fact-content">성수동 대신 무당집 유래지인 **신당동**에 점집 컨셉 팝업 깔고 가챠 머신으로 줄 세움.</p>
+          </div>
+        </div>
+
+        <button class="btn-fire" onclick="alert('🐰 젤리캣 팩트:\n\n인형을 판 게 아니라 \'내 띠와 취향을 가방에 자랑하는 권리\'를 판 겁니다!')">
+          기획 한 방 확인하기 🔥
+        </button>
+      </article>
+
+      <!-- 2. 스너글 AI 영상 -->
+      <article class="p-box">
+        <span class="box-badge">PROJECT 02</span>
+        <h2 class="box-title">스너글 곰돌이 AI 릴스 광고</h2>
+        <div class="box-quote">"다들 섬유유연제 향기 타령할 때, 곰돌이 춤추게 만들었습니다"</div>
+
+        <div class="fact-cards">
+          <div class="fact-row">
+            <div class="fact-label">🚨 팩트 폭격</div>
+            <p class="fact-content">다우니, 피죤 똑같은 향기 자랑. 광고 3초 이상 보는 사람? 단 한 명도 없음.</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">💡 도발적 기획</div>
+            <p class="fact-content">유일한 무기인 '스너글 베어'로 20대 여성 심장 폭행하는 숏폼 애니메이션 제작!</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">🤖 AI 기술 구현</div>
+            <p class="fact-content">외형 안 깨지게 ChatGPT 시트 뽑아 박제하고 Higgsfield로 부드러운 모션 연결 완성.</p>
+          </div>
+        </div>
+
+        <button class="btn-fire" onclick="alert('🧸 스너글 팩트:\n\n비싼 촬영팀 없이도 프롬프트만 잘 깎으면 60초 만에 시선 뺏는 광고 나옵니다!')">
+          AI 숏폼 무기 확인하기 🔥
+        </button>
+      </article>
+
+      <!-- 3. 키톡스 마스크팩 -->
+      <article class="p-box">
+        <span class="box-badge">PROJECT 03</span>
+        <h2 class="box-title">KITOX 마스크팩 공감형 광고</h2>
+        <div class="box-quote">"성분 자랑해봤자 안 읽어! 3040 시술 공포증을 찔러야 사지!"</div>
+
+        <div class="fact-cards">
+          <div class="fact-row">
+            <div class="fact-label">🚨 팩트 폭격</div>
+            <p class="fact-content">평점 4.9에 와디즈 1위면 뭐 해? 아무도 검색 안 하는데! 인지도 바닥 상태.</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">💡 도발적 기획</div>
+            <p class="fact-content">"피부과 시술 부작용 무섭지? 근데 화장품은 아쉽지? 그 틈새가 우리 자리야!"</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">📈 미친 카피라이팅</div>
+            <p class="fact-content">"시술은 망설여지고 화장품은 아쉬울 때, 주름을 지우는 열쇠 KITOX"로 리뷰 10배 견인.</p>
+          </div>
+        </div>
+
+        <button class="btn-fire" onclick="alert('💧 키톡스 팩트:\n\n고객의 긁고 싶은 가려운 곳(결핍)을 후벼파야 전환이 터집니다!')">
+          전환 카피 확인하기 🔥
+        </button>
+      </article>
+
+      <!-- 4. KT M 모바일 -->
+      <article class="p-box">
+        <span class="box-badge">PROJECT 04</span>
+        <h2 class="box-title">KT M 모바일 2030 알뜰폰 광고</h2>
+        <div class="box-quote">"요금제 복잡해서 안 봐! 그냥 커피 쿠폰 공짜로 준다고 해!"</div>
+
+        <div class="fact-cards">
+          <div class="fact-row">
+            <div class="fact-label">🚨 팩트 폭격</div>
+            <p class="fact-content">알뜰폰은 노인들 효도폰이라는 꼰대 인식. 2030은 통신 스펙 거들떠도 안 봄.</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">💡 도발적 기획</div>
+            <p class="fact-content">청년들이 매일 마시는 커피, 배민 쿠폰 들이밀며 1분 만에 장바구니 담게 설계!</p>
+          </div>
+          <div class="fact-row">
+            <div class="fact-label">🎥 1인 올라운드</div>
+            <p class="fact-content">A7M3 카메라 들고 현장 촬영부터 프리미어 컷편집까지 혼자 싹 다 끝냄.</p>
+          </div>
+        </div>
+
+        <button class="btn-fire" onclick="alert('📱 KT M 팩트:\n\n기획이 엉성하면 카메라가 1억짜리여도 쓰레기 결과물 나옵니다. Why가 전부입니다!')">
+          1인 프로덕션 확인하기 🔥
+        </button>
+      </article>
+
+    </div>
+
+    <!-- 하단 펀치라인 -->
+    <div class="bottom-punch">
+      <h2>"이래도 안 팔릴 것 같습니까?"</h2>
+      <div class="punch-quote">
+        "말만 그럴싸한 마케터 말고, 진짜 고객 심리 흔들어서 매출 꽂아 넣을 놈 데려가세요!" ⚡
+      </div>
+      <div>
+        <button class="btn-fire" style="font-size:1.15rem; padding:15px 36px;" onclick="alert('🚀 정민교 마케터 직통 연결: 010-4785-3020 / apcde@naver.com')">
+          지금 당장 연락해서 써먹기 ☕
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

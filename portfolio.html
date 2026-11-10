@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민교 | 어디로 튈지 모르는 크리에이티브 프로젝트 팩토리 💥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800&family=Pretendard:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #12131C;
+      --card: #1E202E;
+      --border: #FFE600;
+      --c-yellow: #FFE600;
+      --c-pink: #FF3377;
+      --c-mint: #00FFA3;
+      --c-purple: #B266FF;
+      --c-cyan: #00E5FF;
+      --shadow: 6px 6px 0px #FFE600;
+      --shadow-pink: 6px 6px 0px #FF3377;
+      --shadow-mint: 6px 6px 0px #00FFA3;
+      --shadow-purple: 6px 6px 0px #B266FF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: #FFFFFF;
+      font-family: 'Pretendard', sans-serif;
+      padding: 60px 20px;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(rgba(255, 230, 0, 0.15) 1.5px, transparent 1.5px),
+        radial-gradient(rgba(255, 51, 119, 0.15) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    /* 네온 키치 헤더 */
+    .header-box {
+      border: 3.5px solid var(--c-yellow);
+      background: #181926;
+      border-radius: 24px;
+      padding: 44px 36px;
+      box-shadow: var(--shadow-pink);
+      margin-bottom: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .floating-sticker {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      background: var(--c-mint);
+      color: #000;
+      font-family: 'Fredoka', cursive;
+      font-size: 1.1rem;
+      font-weight: 900;
+      padding: 6px 18px;
+      border: 2.5px solid #fff;
+      border-radius: 999px;
+      box-shadow: 3px 3px 0px #fff;
+      transform: rotate(6deg);
+      animation: wiggle 2s infinite alternate ease-in-out;
+    }
+    @keyframes wiggle {
+      0% { transform: rotate(4deg) scale(1); }
+      100% { transform: rotate(-5deg) scale(1.05); }
+    }
+
+    .badge-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 4px 14px;
+      border-radius: 999px;
+      border: 2px solid #000;
+      color: #000;
+    }
+    .b-yellow { background: var(--c-yellow); }
+    .b-pink { background: var(--c-pink); color: #fff; border-color: #fff; }
+    .b-cyan { background: var(--c-cyan); }
+
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .neon-text {
+      color: var(--c-yellow);
+      text-shadow: 2px 2px 0px var(--c-pink);
+    }
+    .desc {
+      font-size: 1.15rem;
+      color: #D1D5DB;
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    /* 키치 카드 4선 그리드 */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+
+    .p-card {
+      background: var(--card);
+      border: 3.5px solid #fff;
+      border-radius: 22px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .card-1 { border-color: var(--c-pink); box-shadow: var(--shadow); }
+    .card-2 { border-color: var(--c-cyan); box-shadow: var(--shadow-pink); }
+    .card-3 { border-color: var(--c-mint); box-shadow: var(--shadow-purple); }
+    .card-4 { border-color: var(--c-purple); box-shadow: var(--shadow-mint); }
+
+    .p-card:hover {
+      transform: translate(-3px, -3px) scale(1.01);
+    }
+
+    .card-num {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background: #000;
+      border: 2.5px solid #fff;
+      color: #fff;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 2px 14px;
+      border-radius: 8px;
+    }
+
+    .p-icon {
+      font-size: 3.2rem;
+      margin: 10px 0 14px;
+    }
+    .p-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .p-role-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+      color: #FFE600;
+      margin-bottom: 16px;
+    }
+
+    /* 4칸 미니 벤토 (Problem - Solution) */
+    .mini-box-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .mini-box {
+      background: rgba(0,0,0,0.35);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .mini-lbl {
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: var(--c-cyan);
+      margin-bottom: 4px;
+    }
+    .mini-txt {
+      font-size: 0.86rem;
+      color: #E5E7EB;
+      line-height: 1.45;
+    }
+
+    /* 인터랙션 버튼 */
+    .action-btn {
+      background: var(--c-yellow);
+      color: #000;
+      border: 2.5px solid #000;
+      padding: 12px;
+      border-radius: 12px;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px #fff;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .action-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #fff;
+      background: var(--c-pink);
+      color: #fff;
+    }
+
+    /* 어디로 튈지 모르는 룰렛 배너 */
+    .roulette-box {
+      margin-top: 60px;
+      background: #FFE600;
+      color: #000;
+      border: 4px solid #000;
+      border-radius: 20px;
+      padding: 36px 30px;
+      box-shadow: 8px 8px 0px var(--c-pink);
+      text-align: center;
+    }
+    .roulette-box h3 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .roulette-result {
+      font-size: 1.25rem;
+      font-weight: 800;
+      background: #fff;
+      border: 2.5px solid #000;
+      border-radius: 14px;
+      padding: 16px;
+      margin: 18px auto;
+      max-width: 580px;
+      box-shadow: 4px 4px 0px #000;
+    }
+
+    @media (max-width: 860px) {
+      .project-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- 헤더 -->
+    <header class="header-box">
+      <div class="floating-sticker">⚡ CVR BOOSTER!</div>
+      <div class="badge-bar">
+        <span class="badge b-yellow">MARKETING LAB</span>
+        <span class="badge b-pink">AI VIDEO PRODUCER</span>
+        <span class="badge b-cyan">CREATIVE DIRECTOR</span>
+      </div>
+      <h1>어디로 튈지 모르는<br><span class="neon-text">정민교의 프로젝트 팩토리 💥</span></h1>
+      <p class="desc">
+        "뻔한 마케팅은 지나치지만, <strong>미친 기획과 정교한 데이터</strong>는 고객의 지갑을 엽니다."<br>
+        애착인형을 12지신 사주 키링으로 둔갑시키고, AI로 곰돌이 캐릭터 광고를 찍는 기획자의 실무 프로젝트 모음집입니다!
+      </p>
+    </header>
+
+    <!-- 프로젝트 4선 -->
+    <div class="project-grid">
+
+      <!-- 1. 젤리캣 (Masterpiece) -->
+      <article class="p-card card-1">
+        <span class="card-num">PROJECT 01</span>
+        <div class="p-icon">🐰🔮</div>
+        <h2 class="p-title">젤리캣 한국 런칭 '12지 키링' & 신당동 팝업 전략</h2>
+        <span class="p-role-tag">⭐ 1인 단독 기획 (기여도 100% · 30장 분량)</span>
+
+        <div class="mini-box-grid">
+          <div class="mini-box">
+            <div class="mini-lbl">🚨 리스크 돌파</div>
+            <p class="mini-txt">6만 원대 고가 논란("한국에 돈 벌러 왔다")을 잠재울 강력한 현지화 명분 필요!</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">💡 발칙한 인사이트</div>
+            <p class="mini-txt">젠지·잘파 세대의 사주/타로/띠 문화와 가방 키링 트렌드를 결합 ➡️ '한국 전용 12지 키링' 제안</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🎪 신당동 팝업</div>
+            <p class="mini-txt">무속 신앙의 유래지 '신당동' 팝업스토어로 문화적 맥락 극대화 + 12지 가챠 머신 도입</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🧸 CRM 케어</div>
+            <p class="mini-txt">세탁 후 털 뭉침 불만을 해결하는 '젤리캣 복원 케어' 서비스로 기존 고객 재구매 유도</p>
+          </div>
+        </div>
+
+        <button class="action-btn" onclick="alert('🐰 젤리캣 12지 키링 비하인드:\n\n젠지 세대에게 키링은 액세서리가 아니라 \'나를 표현하는 자기소개 언어\'였습니다! 20시간 만에 30장 제안서 완판!')">
+          기획 비하인드 엿보기 🔍
+        </button>
+      </article>
+
+      <!-- 2. 스너글 AI 영상 -->
+      <article class="p-card card-2">
+        <span class="card-num">PROJECT 02</span>
+        <div class="p-icon">🧸🎬</div>
+        <h2 class="p-title">스너글 (Snuggle) AI 마스코트 광고 영상</h2>
+        <span class="p-role-tag">🤖 6인 팀 프로젝트 (기여도 30% · AI 프롬프트/연출)</span>
+
+        <div class="mini-box-grid">
+          <div class="mini-box">
+            <div class="mini-lbl">📉 시장 문제</div>
+            <p class="mini-txt">다우니, 피죤 등 모두가 "향 지속력"만 외치는 지루한 시장 틈새</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🐻 브랜드 자산</div>
+            <p class="mini-txt">유일한 공식 캐릭터 '스너글 베어'를 20대 여성 타깃 숏폼 전면에 배치!</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">⚙️ 기술적 해결</div>
+            <p class="mini-txt">외형 붕괴 방지를 위해 ChatGPT 턴어라운드 시트 먼저 고정 후 Higgsfield 모션 생성</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">⏱️ 성과</div>
+            <p class="mini-txt">기존 실사 촬영 대비 비용/시간 대폭 절감하며 60초 완성형 광고 탄생</p>
+          </div>
+        </div>
+
+        <button class="action-btn" onclick="alert('🧸 스너글 AI 영상 비하인드:\n\n이미지 단계에서 캐릭터 외형을 완벽히 설계하지 않고 비디오를 돌리면 곰인형이 외계인이 됩니다. 프롬프트 엔지니어링의 힘!')">
+          AI 프롬프트 노하우 보기 🔍
+        </button>
+      </article>
+
+      <!-- 3. 키톡스 마스크팩 -->
+      <article class="p-card card-3">
+        <span class="card-num">PROJECT 03</span>
+        <div class="p-icon">💧🎯</div>
+        <h2 class="p-title">뷰티 브랜드 KITOX 마스크팩 광고 영상</h2>
+        <span class="p-role-tag">🎬 3인 팀 프로젝트 (기여도 30% · 기획/촬영/조연출)</span>
+
+        <div class="mini-box-grid">
+          <div class="mini-box">
+            <div class="mini-lbl">🤔 왜 안 팔릴까?</div>
+            <p class="mini-txt">와디즈 1위, 평점 4.9인데 검색량과 인지도는 경쟁사 대비 바닥인 기현상</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🎯 3040 결핍 발견</div>
+            <p class="mini-txt">피부과 시술은 부작용(59.8%)과 돈이 겁나고, 일반 화장품은 효과가 아쉽다!</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🔑 킬러 카피</div>
+            <p class="mini-txt">"시술은 망설여지고 화장품은 아쉬울 때, 주름을 지우는 열쇠 KITOX"</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">📈 목표 설정</div>
+            <p class="mini-txt">출퇴근 공감형 영상으로 네이버 쇼핑 실구매 리뷰 40개 ➡️ 400개 견인</p>
+          </div>
+        </div>
+
+        <button class="action-btn" onclick="alert('💧 키톡스 마케팅 교훈:\n\n성분 자랑 백날 해봤자 고객은 안 봅니다. 고객의 결핍(Pain Point)을 대신 말해줘야 전환이 일어납니다!')">
+          타깃 인사이트 보기 🔍
+        </button>
+      </article>
+
+      <!-- 4. KT M 모바일 -->
+      <article class="p-card card-4">
+        <span class="card-num">PROJECT 04</span>
+        <div class="p-icon">📱☕</div>
+        <h2 class="p-title">KT M 모바일 2030 알뜰폰 홍보 영상</h2>
+        <span class="p-role-tag">⭐ 1인 단독 프로젝트 (100% · 기획/촬영/편집)</span>
+
+        <div class="mini-box-grid">
+          <div class="mini-box">
+            <div class="mini-lbl">👵 효도폰 편견</div>
+            <p class="mini-txt">부모님 폰이라는 인식을 깨고 스마트한 MZ 자급제 소비자로 타깃 리포지셔닝</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🍔 일상 혜택 소구</div>
+            <p class="mini-txt">어려운 요금제 스펙 대신 2030이 환장하는 커피, 배민 쿠폰 혜택 전면 강조</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">🎥 1인 프로덕션</div>
+            <p class="mini-txt">Sony A7M3로 직접 현장 지휘, 촬영, 프리미어 프로 모션 자막 컷편집</p>
+          </div>
+          <div class="mini-box">
+            <div class="mini-lbl">💡 마케터의 각성</div>
+            <p class="mini-txt">"기획(Why)이 탄탄하지 못하면 영상 기술이 아무리 좋아도 망한다!"</p>
+          </div>
+        </div>
+
+        <button class="action-btn" onclick="alert('📱 KT M 모바일 비하인드:\n\n이 프로젝트 덕분에 기획의 소중함을 깨닫고 퍼포먼스 마케팅에 미치게 되었습니다!')">
+          마케터 각성기 보기 🔍
+        </button>
+      </article>
+
+    </div>
+
+    <!-- 어디로 튈지 모르는 크리에이티브 룰렛 -->
+    <div class="roulette-box">
+      <h3>🎰 정민교의 어디로 튈지 모르는 마케팅 영감 머신</h3>
+      <p style="font-weight:700;">버튼을 누를 때마다 엉뚱하지만 팔리는 기획 아이디어가 튀어나옵니다!</p>
+      
+      <div class="roulette-result" id="rouletteOutput">
+        "사주 12지신 젤리캣 키링을 신당동 점집 골목에서 가챠 머신으로 판다!" 🐰
+      </div>
+
+      <button class="action-btn" style="background:#000; color:#fff; border-color:#000;" onclick="spinRoulette()">
+        🎲 기획 영감 룰렛 돌리기!
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const ideas = [
+      "사주 12지신 젤리캣 키링을 신당동 점집 골목에서 가챠 머신으로 판다! 🐰",
+      "공포영화 개봉 전, CGV 주변에 괴기스러운 피자가게 알바 구인 벽보를 붙여 SNS를 발칵 뒤집는다! 🍕",
+      "스너글 섬유유연제 곰돌이를 AI로 만들어 60초 만에 춤추는 릴스 광고를 찍는다! 🧸",
+      "시술 부작용 무서워하는 3040 직장인 출근길 버스정류장에 마스크팩 광고를 꽂는다! 💧",
+      "알뜰폰 요금제 스펙 설명 때려치우고 공짜 커피 쿠폰만 들이밀어 2030을 낚는다! ☕",
+      "이력서가 너무 평범해서 심심할 땐 네온 핑크와 노란색으로 도배해 면접관 눈을 번쩍 뜨이게 만든다! ⚡"
+    ];
+
+    function spinRoulette() {
+      const random = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById('rouletteOutput').textContent = random;
+    }
+  </script>
+</body>
+</html>

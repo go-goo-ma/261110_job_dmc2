@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민교 | 이력서인데 이렇게 힙해도 되나요? 🍕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800&family=Pretendard:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFDF0;
+      --paper: #FFFFFF;
+      --line: #1A1A1A;
+      --c-yellow: #FFE600;
+      --c-pink: #FF4D88;
+      --c-mint: #00E5A3;
+      --c-purple: #9D4EDD;
+      --c-orange: #FF7A00;
+      --shadow: 5px 5px 0px var(--line);
+      --shadow-sm: 3px 3px 0px var(--line);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--line);
+      font-family: 'Pretendard', sans-serif;
+      padding: 50px 20px;
+      line-height: 1.6;
+      background-image: radial-gradient(#E8E0C5 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 통통 튀는 스티커 헤더 */
+    .hero-box {
+      background: var(--c-yellow);
+      border: 3px solid var(--line);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .sticker-badge {
+      position: absolute;
+      top: -16px;
+      right: 28px;
+      background: var(--c-pink);
+      color: #fff;
+      font-family: 'Fredoka', cursive;
+      font-size: 0.95rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border: 2.5px solid var(--line);
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      transform: rotate(4deg);
+    }
+    .title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+    .sub-pill {
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      box-shadow: 2px 2px 0px var(--line);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .c-pill {
+      background: #fff;
+      border: 2px solid var(--line);
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 2px 2px 0px var(--line);
+    }
+
+    /* 벤토 카드 그리드 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .kitsch-card {
+      background: var(--paper);
+      border: 3px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .kitsch-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0px var(--line);
+    }
+
+    .card-label {
+      display: inline-block;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 3px 12px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 2px 2px 0px var(--line);
+      margin-bottom: 14px;
+    }
+    .lbl-pink { background: var(--c-pink); color: #fff; }
+    .lbl-mint { background: var(--c-mint); }
+    .lbl-purple { background: var(--c-purple); color: #fff; }
+    .lbl-orange { background: var(--c-orange); color: #fff; }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+
+    /* 스킬 스티커 */
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      box-shadow: 2px 2px 0px var(--line);
+    }
+    .chip-hot { background: var(--c-yellow); }
+
+    /* 타임라인 바이트 */
+    .exp-item {
+      background: #F9F9F9;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      box-shadow: 2px 2px 0px var(--line);
+    }
+    .exp-item:last-child { margin-bottom: 0; }
+    .exp-item h4 { font-size: 1.05rem; font-weight: 800; }
+    .exp-item .date { font-size: 0.8rem; color: #666; font-weight: 700; margin-bottom: 4px; }
+    .exp-item p { font-size: 0.88rem; color: #333; }
+
+    /* 자기소개 위트 블록 */
+    .essay-card {
+      grid-column: span 2;
+      background: #FFF7EB;
+    }
+    .quote-box {
+      background: #fff;
+      border: 2.5px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      box-shadow: 3px 3px 0px var(--line);
+    }
+    .quote-box h5 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--c-pink);
+      margin-bottom: 6px;
+    }
+    .quote-box p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* 어디로 튈지 모르는 미니 도장 찍기 */
+    .interactive-bar {
+      background: var(--c-mint);
+      border: 3px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .stamp-btn {
+      background: var(--c-pink);
+      color: #fff;
+      border: 2px solid var(--line);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 3px 3px 0px var(--line);
+    }
+    .stamp-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px var(--line);
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .essay-card { grid-column: span 1; }
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- 헤더 -->
+    <header class="hero-box">
+      <div class="sticker-badge">✨ HIRE ME!</div>
+      <div class="title-row">
+        <h1>정민교 (MINGYO)</h1>
+        <span class="sub-pill">🎯 36세 / 마케터인데 영상을 곁들인</span>
+        <span class="sub-pill">🤖 AI 툴 99점</span>
+      </div>
+      <p class="tagline">"이력서가 너무 얌전하면 재미없잖아요? 콘텐츠로 전환(매출)을 증명하는 마케터입니다!"</p>
+      
+      <div class="contact-row">
+        <div class="c-pill">✉️ apcde@naver.com</div>
+        <div class="c-pill">📞 010-4785-3020</div>
+        <div class="c-pill">📍 서울 금천구 독산동</div>
+        <div class="c-pill">🏆 Google AdWords 인증</div>
+      </div>
+    </header>
+
+    <!-- 벤토 그리드 -->
+    <div class="grid">
+      <!-- 역량 -->
+      <div class="kitsch-card">
+        <span class="card-label lbl-pink">TOOL BAG 🧰</span>
+        <h3 class="card-title">도구는 가리지 않습니다</h3>
+        <div class="skill-chips">
+          <span class="chip chip-hot">🎬 Sony A7M3 1인 촬영</span>
+          <span class="chip chip-hot">✂️ Premiere Pro 컷편집</span>
+          <span class="chip">📱 CapCut 릴스/숏폼</span>
+          <span class="chip chip-hot">🤖 ChatGPT 캐릭터 시트</span>
+          <span class="chip">🔮 Midjourney & FLUX</span>
+          <span class="chip chip-hot">🎥 Higgsfield AI 모션</span>
+          <span class="chip">📊 Google GA4 & GTM</span>
+          <span class="chip">📈 Meta 광고 세팅/입찰</span>
+        </div>
+      </div>
+
+      <!-- 타임라인 -->
+      <div class="kitsch-card">
+        <span class="card-label lbl-mint">EXPERIENCE 🚀</span>
+        <h3 class="card-title">현장에서 구른 실무 발자국</h3>
+        <div class="exp-item">
+          <h4>지오코칭 교육기획팀 (인턴)</h4>
+          <div class="date">2025.07 ~ 2025.10</div>
+          <p>국민취업제도 홍보 AI 캐릭터 제작, Vrew 숏폼 광고 2편 제작, 인스타 Meta 광고 집행</p>
+        </div>
+        <div class="exp-item">
+          <h4>영등포구청 홍보미디어과</h4>
+          <div class="date">2024.04 ~ 2024.12</div>
+          <p>DSLR/스마트폰 1인 영상 기획·촬영·편집, 카드뉴스 및 온·오프라인 구정 홍보물 올라운드 제작</p>
+        </div>
+        <div class="exp-item">
+          <h4>미래내일 일경험 (지니스 커뮤니케이션)</h4>
+          <div class="date">2023.07 ~ 2023.10</div>
+          <p>영화 &lt;프레디의 피자가게&gt; 괴기스러운 알바 구인공고 위장 벽보 + QR코드 CGV 바이럴 성공</p>
+        </div>
+      </div>
+
+      <!-- 왜 마케팅인가 (스토리) -->
+      <div class="kitsch-card essay-card">
+        <span class="card-label lbl-purple">BEHIND STORY 🍕</span>
+        <h3 class="card-title">실패가 저를 마케터로 만들었습니다</h3>
+        
+        <div class="quote-box">
+          <h5>🍕 동생 야식 가게 폐업의 교훈 : "맛있다고 다 사 먹는 게 아니더라"</h5>
+          <p>
+            1년간 동생의 야식 가게를 도우며 폐업을 겪었습니다. 정성과 맛이 있어도 고객의 결핍을 건드려 문을 열고 들어오게 만드는 <strong>'전환의 구조'</strong>가 없으면 끝이라는 걸 뼈저리게 배웠습니다.
+          </p>
+        </div>
+
+        <div class="quote-box">
+          <h5>💡 영등포구청에서의 깨달음 : "타깃 없는 좋은 정책은 메아리일 뿐"</h5>
+          <p>
+            시민들에게 정말 꿀 같은 혜택인데 아무도 몰라서 안 쓰는 걸 보며, 마케팅은 필요한 사람의 눈앞에 가장 찰떡같은 메시지를 배달해 행동하게 만드는 일이라는 확신을 가졌습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인터랙티브 스탬프 바 -->
+    <div class="interactive-bar">
+      <div>
+        <strong style="font-size:1.1rem;">이 마케터 탐나시나요? ☕</strong>
+        <p style="font-size:0.9rem; color:#222;">클릭해서 즉시 면접 제안 스탬프를 날려보세요!</p>
+      </div>
+      <button class="stamp-btn" onclick="alert('🎉 서류 합격 스탬프가 찍혔습니다! apcde@naver.com으로 연락 주세요!')">
+        🎯 서류 합격 도장 쾅!
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
